@@ -20,15 +20,13 @@ resource "ibm_is_subnet" "subnet2" {
   total_ipv4_address_count = 256
 }
 
-#data "ibm_resource_group" "resource_group" {
-  #name = IaC
-#}
 resource "ibm_container_vpc_cluster" "cluster" {
   name              = "vpcks"
   vpc_id            = ibm_is_vpc.vpc1.id
   flavor            = "bx2.4x16"
-  worker_count      = 3
-  #resource_group_id = data.ibm_resource_group.resource_group.id
+  worker_count      = 1.25.8
+  kube_version=2.
+ 
   zones {
     subnet_id = ibm_is_subnet.subnet1.id
     name      = "us-south-1"
