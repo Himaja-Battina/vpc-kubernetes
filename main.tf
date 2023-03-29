@@ -9,14 +9,15 @@ terraform {
 
 
 provider "ibm" {
-  region = "us-south"
-}
+  
 
 
 
 
 provider "ibm" {
   generation = 2
+  region = "us-south"
+
 }
 resource "ibm_is_vpc" "vpc1" {
   name = "myvpc"
