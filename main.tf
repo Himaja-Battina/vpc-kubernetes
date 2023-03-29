@@ -1,11 +1,9 @@
 provider "ibm" {
   generation = 2
 }
-
 resource "ibm_is_vpc" "vpc1" {
-  name = "myvpc
+  name = "myvpc"
 }
-
 resource "ibm_is_subnet" "subnet1" {
   name                     = "subnet-1"
   vpc                      = ibm_is_vpc.vpc1.id
