@@ -54,7 +54,6 @@ resource "ibm_container_vpc_worker_pool" "cluster_pool" {
   flavor            = "bx2.2x8"
   vpc_id            = ibm_is_vpc.vpc1.id
   worker_count      = 1
-  resource_group_id = data.ibm_resource_group.resource_group.id
   zones {
     name      = "us-south-2"
     subnet_id = ibm_is_subnet.subnet2.id
