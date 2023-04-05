@@ -41,6 +41,7 @@ resource "ibm_container_vpc_cluster" "cluster" {
   flavor            = "bx2.4x16"
   worker_count      = 1
   kube_version="1.25.8"
+  resource_group_id="IaC-dev"
  
   zones {
     subnet_id = ibm_is_subnet.subnet1.id
