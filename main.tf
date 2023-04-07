@@ -6,7 +6,9 @@ terraform {
     }
   }
 }
-
+data "ibm_resource_group" "resource_group" {
+  name = "Iac-dev"
+}
 
   
 
@@ -41,7 +43,7 @@ resource "ibm_container_vpc_cluster" "cluster" {
   flavor            = "bx2.4x16"
   worker_count      = 1
   kube_version="1.25.8"
-  resource_group_id="IaC-dev"
+  resource_group_id="1a94f5c9081d48d0885227df98898f18"
  
   zones {
     subnet_id = ibm_is_subnet.subnet1.id
