@@ -19,6 +19,7 @@ provider "ibm" {
 }
 resource "ibm_is_vpc" "vpc1" {
   name = "myvpc"
+  resource_group="1a94f5c9081d48d0885227df98898f18"
 }
 resource "ibm_is_subnet" "subnet1" {
   name                     = "subnet-1"
