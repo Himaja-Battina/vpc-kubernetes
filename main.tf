@@ -26,6 +26,7 @@ resource "ibm_is_subnet" "subnet1" {
   vpc                      = ibm_is_vpc.vpc1.id
   zone                     = "us-south-1"
   total_ipv4_address_count = 256
+  resource_group="1a94f5c9081d48d0885227df98898f18"
 }
 
 resource "ibm_is_subnet" "subnet2" {
@@ -33,6 +34,7 @@ resource "ibm_is_subnet" "subnet2" {
   vpc                      = ibm_is_vpc.vpc1.id
   zone                     = "us-south-2"
   total_ipv4_address_count = 256
+  resource_group="1a94f5c9081d48d0885227df98898f18"
 }
 
 resource "ibm_container_vpc_cluster" "cluster" {
